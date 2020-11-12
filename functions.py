@@ -1,5 +1,8 @@
+import sys
+
 import pygame
 import pygame.freetype
+
 
 def create_surface_with_text(text, font_theme, font_size, text_rgb, bg_rgb):
     """ Returns surface with text written on """
@@ -15,6 +18,9 @@ def title_screen(screen, settings, start_btn, quit_btn):
         for event in pygame.event.get():
             if event.type == pygame.MOUSEBUTTONUP and event.button == 1:
                 mouse_up = True
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
         screen.fill(settings.bg_rgb)
 
         for button in buttons:
@@ -32,6 +38,9 @@ def play_level(screen, settings, return_btn):
         for event in pygame.event.get():
             if event.type == pygame.MOUSEBUTTONUP and event.button == 1:
                 mouse_up = True
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
         screen.fill(settings.bg_rgb)
 
         ui_action = return_btn.update(pygame.mouse.get_pos(), mouse_up)

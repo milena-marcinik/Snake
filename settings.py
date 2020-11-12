@@ -11,4 +11,3 @@ class Settings:
         self.font_theme = "font/Gameplay.ttf"
         self.font_size = 30
         self.text_rgb = (255, 255, 255)  # white
-
