@@ -4,7 +4,7 @@ import functions as func
 from settings import Settings
 from ui_element import UIElement
 from game_state import GameState
-
+from snake_player import Snake
 
 def main():
     pygame.init()
@@ -24,6 +24,9 @@ def main():
                            (screen.get_rect().left + 240, screen.get_rect().bottom - 40),
                            action=GameState.TITLE)
 
+    # make a snake
+    snake = Snake(screen, settings)
+
     game_state = GameState.TITLE  # początkowy stan gry
 
     # main loop
@@ -32,7 +35,7 @@ def main():
             game_state = func.title_screen(screen, settings, start_btn, quit_btn)
 
         if game_state == GameState.NEWGAME: # ekran po kliknieciu nowej gry
-            game_state = func.play_level(screen, settings, return_btn)
+            game_state = func.play_level(screen, settings, snake, return_btn)
 
         if game_state == GameState.QUIT: # zamknięcie gry
             pygame.quit()
