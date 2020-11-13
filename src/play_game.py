@@ -1,10 +1,10 @@
-import pygame, sys
+import pygame
 
-import functions as func
-from settings import Settings
-from ui_element import UIElement
-from game_state import GameState
-from snake_player import Snake
+from src import functions as func
+from src.settings import Settings
+from src.ui_element import UIElement
+from src.game_state import GameState
+from src.snake_player import Snake
 
 def main():
     pygame.init()

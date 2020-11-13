@@ -1,7 +1,5 @@
-import pygame
-
 from pygame.sprite import Sprite
-from functions import create_surface_with_text
+from src.functions import create_surface_with_text
 
 
 class UIElement(Sprite):

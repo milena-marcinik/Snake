@@ -8,7 +8,7 @@ class Settings:
         self.bg_rgb = (255, 153, 204)  # pink
 
         # Font settings
-        self.font_theme = "font/Gameplay.ttf"
+        self.font_theme = "src/font/Gameplay.ttf"
         self.font_size = 30
         self.text_rgb = (255, 255, 255)  # white
 
