@@ -12,11 +12,14 @@ def main():
     screen = pygame.display.set_mode((settings.screen_width, settings.screen_height))  # wymiary ekranu gry
     pygame.display.set_caption("Snake")
 
+    # utworzenie przycisku startowego
     start_btn = UIElement(settings, "Start Game", (screen.get_rect().centerx, screen.get_rect().centery - 20),
                           action=GameState.NEWGAME)
+    # utworzenie przycisku wyjścia
     quit_btn = UIElement(settings, "Quit", (screen.get_rect().centerx, screen.get_rect().centery + 30),
                          action=GameState.QUIT)
 
+    # utworzenie przycisku powrotu do menu głównego
     return_btn = UIElement(settings, "Return to main menu",
                            (screen.get_rect().left + 240, screen.get_rect().bottom - 40),
                            action=GameState.TITLE)
